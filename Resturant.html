@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Indian taste hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Sample menu items (in a real system, these would come from a database)
+        const menuItems = [
+            { name: "PALAK PANEER", price: 120 },
+            { name: "PANEER TIKKA", price: 120 },
+            { name: "PANEER BUTTER MASALA", price: 180 },
+            { name: "SHAHI PANEER", price: 160 },
+            { name: "KADAI PANEER", price: 190 },
+            { name: "MATAR PANEER", price: 200 },
+            { name: "PANEER MAKHANI", price: 220 },
+            { name: "PANEER BHURJI", price: 120 },
+            { name: "CHOLE BHATURE", price: 80 },
+            { name: "TANDOORI CHICKEN", price: 90 },
+            { name: "DAL MAKHANI", price: 80 },
+            { name: "NAAN", price: 60 },
+            { name: "ALOO GOBI", price: 70 },
+            { name: "ROGAN JOSH", price: 100 },
+            { name: "GAJAR KA HALWA", price: 60 },
+            { name: "ALOO PARATHA", price: 80 },
+            { name: "MYSORE MASALA DOSA", price: 120 },
+            { name: "MASALA DOSA", price: 80 },
+            { name: "ONION DOSA", price: 80 },
+            { name: "PLAIN DOSA", price: 70 },
+            { name: "IDLI", price: 40 },
+            { name: "SAMBHAR", price: 40 },
+            { name: "UTTAPAM", price: 40 },
+            { name: "VADA (MEDU VADA)", price: 60 },
+            { name: "RASAM", price: 80 },
+            { name: "PONGAL", price: 45 },
+            { name: "CURRY LEAF RICE", price: 60 },
+            { name: "COCONUT CHUTNEY", price: 45 },
+            { name: "PAYASAM", price: 70 },
+            { name: "DHOKLA", price: 60 },
+            { name: "THEPLA", price: 70 },
+            { name: "FAFDA", price: 60 },
+            { name: "PAV BHAJI", price: 140 },
+            { name: "SHRIKHAND", price: 85 },
+            { name: "TUNDAY KEBAB", price: 60 },
+            { name: "LUCKNAWI BIRYANI", price: 200 },
+            { name: "DAL PURI", price: 70 },
+            { name: "KACHORI", price: 70 },
+            { name: "DAHI BHALLE", price: 60 },
+            { name: "TEHRI", price: 60 },
+            { name: "ALOO TIKKI", price: 40 },
+            { name: "SAMOSA", price: 20 },
+            { name: "KULHAD CHAI", price: 20 },
+            { name: "GINGER TEA", price: 20 },
+            { name: "MASALA TEA", price: 25 },
+            { name: "LEMON TEA", price: 30 },
+            { name: "BLACK TEA", price: 50 },
+            { name: "ELAICHI TEA", price: 25 },
+            { name: "COLD COFFEE", price: 90 },
+            { name: "HOT COFFEE", price: 60 },
+            { name: "GULAB JAMUN", price: 270 },
+            { name: "RASGULLA", price: 220 },
+            { name: "JALEBI", price: 40 },
+            { name: "KHEER", price: 60 },
+            { name: "BARFI", price: 400 },
+            { name: "HALWA", price: 50 },
+            { name: "PEDA", price: 200 },
+            { name: "MYSORE PAK", price: 80 },
+            { name: "MODAK", price: 150 },
+            { name: "LADOO", price: 270 },
+        ];
+
+        // Initialize an empty order array to store selected items
+        const order = [];
+
+        function addToOrder(itemIndex) {
+            const selectedItem = menuItems[itemIndex];
+            order.push(selectedItem);
+            updateOrderSummary();
+        }
+
+        function updateOrderSummary() {
+            const orderList = document.getElementById("order-list");
+            const totalAmount = document.getElementById("total-amount");
+
+            // Clear existing order list
+            orderList.innerHTML = "";
+            let total = 0;
+
+            // Update the order list and calculate the total amount
+            order.forEach((item, index) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${item.name} - ${item.price.toFixed(2)}`;
+                orderList.appendChild(listItem);
+                total += item.price;
+            });
+
+            totalAmount.textContent = `${total.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+    <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+        <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</header>
+<br>
+         <table align = "right" cellpadding ="1"><TR>
+            <TH><a href="Resturant.html" target="_blank"></a></TR>
+                <TH><a href="signup.html" target="_blank"><button type="button">SIGN UP</a></button></TH>
+            <TH><a href="login.html" target="_blank"><button type="button">LOGIN</button></a></TH>
+            <TH><a href="get_review.html"target="_blank"><button type="button">CUSTOMER REVIEWS</button></a></TH></TR></table>
+                <br><br>
+               <text align="center"> <h3><font face="Comic Sans" size="10">WELCOME to <br></font></h3></text>
+               <text align="center"><h2><b><font color="49796B" font size="15" face="Comic Sans">
+                #The Indian Taste Hub
+         </font></b></h2></text>
+         <center><p><h3><i><font color ="000000" face="Microsoft YaHei UI Light">Where Veggie Dreams Take Flavorful Flight!</font></i></h3></p></center><br>
+         <text align="left"><h3><font color="000000" font size="4" face="Comic Sans">Join Us - Where Calories Don't Count and Smiles are Always On the House!<br><br><br>
+            "Transport your taste buds to the vibrant streets of India at our restaurant,<br> where every dish is a symphony of spices and flavors, offering an authentic culinary <br>journey through the rich tapestry of Indian cuisine."
+     </font></h3>
+    <img src="img.avif" align="right">
+    </text><br><br>
+    <ul>
+        <text align="center"> <h3><font face="Comic Sans" size="10">TIME and VENUE <br></font></h3></text><br><br><br>
+        <text align="center"><p>
+            <b><font face="Copperplate Gothic Light">MONDAY-SATURDAY |10AM-10PM</font></b>
+        </p><br>
+            <p><b><font face="Copperplate Gothic Light">Saturday - Sunday | 9AM - 4PM</font></b></p><br>
+            <p>
+            <b><font face="Wide Latin">Near Plassio Mall,Lucknow,UTTAR PRADESH,India</font></b>
+            </p></text>
+    </ul><br><br><br><br><br><br><br><br><br>
+            <text align="center"> <h3><font face="Broadway" size="18">Our Menu</font></h3></text><br>
+            <text align="center"><h4><font face="Microsoft YaHei UI Light" size="4">"Experience India on a Plate: Where Every Bite Unveils a Story of Rich Culinary Heritage!"</font></h4></text><br><br><br>
+            <hr class="perpendicular-line">      
+            <p><b><font color="black" face="Engravers MT" size="6" >NORTH-Indian DISHES</a></font></b></p><br>
+            <hr class="perpendicular-line">
+            <img src="GettyImages-1223580360.webp" height="400" width="800" align ="right">
+            <text align="center"><ul><p><b><u><font face="Copperplate Gothic Light" size="6">PANEER</font></u></b></p></ul></text>
+            <section id="menu">
+                <ul>
+            <font face="Californian FB" size="3.9"><li><b>PALAK PANEER - Rs.120/- <button onclick="addToOrder(0)">Add to Order</button></b></li>
+            <br>
+            <li><b>PANEER TIKKA- Rs.120/- <button onclick="addToOrder(1)">Add to Order</button></b></li>
+            <br>
+            <li><b>PANEER BUTTER MASALA- Rs.180/- <button onclick="addToOrder(2)">Add to Order</button></b></li>
+            <br>
+            <li><b>SHAHI PANEER- Rs.160/- <button onclick="addToOrder(3)">Add to Order</button></b></li>
+            <br>
+            <li><b>KADAI PANEER- Rs.190/- <button onclick="addToOrder(4)">Add to Order</button></b></li>
+            <br>
+            <li><b>MATAR PANEER- Rs.200/-<button onclick="addToOrder(5)">Add to Order</button></b></li>
+            <br>
+            <li><b>PANEER MAKHANI- Rs.220/-<button onclick="addToOrder(6)">Add to Order</button></b></li>
+            <br>
+            <li><b>PANEER BHURJI- Rs.120/- <button onclick="addToOrder(7)">Add to Order</button></b></li>
+            <br></font></ul>
+            <text align="center"><ul><p><b><u><font face="Copperplate Gothic Light" size="6">SPECIAL DISHES</font></u></b></p></ul></text>
+            <text align="center"><font face="Californian FB" size="4">
+            <p><b>CHOLE BHATURE- Rs.80/- <button onclick="addToOrder(8)">Add to Order</button></b></p>
+            <br>
+            <p><b>TANDOORI CHICKEN- Rs.90/- <button onclick="addToOrder(9)">Add to Order</button></b></p>
+            <br>
+            <p><b>DAL MAKHANI- Rs.80/- <button onclick="addToOrder(10)">Add to Order</button></b></p>
+            <br>
+            <p><b>NAAN- Rs.60/- <button onclick="addToOrder(11)">Add to Order</button></b></p>
+            <br>
+            <p><b>ALOO GOBI- Rs.70/- <button onclick="addToOrder(12)">Add to Order</button></b></p>
+            <br>
+            <p><b>ROGAN JOSH- Rs.100/- <button onclick="addToOrder(13)">Add to Order</button></b></p>
+            <br>
+            <p><b>GAJAR KA HALWA- Rs.60/-<button onclick="addToOrder(14)">Add to Order</button></b></p>
+            <br>
+            <p><b>ALOO PARATHA- Rs.80/- <button onclick="addToOrder(15)">Add to Order</button></b></p>
+            <br></font></text></section>
+            <hr class="perpendicular-line">
+            <br>
+             <p><b><font color="black" face="Engravers MT" size="6" >SOUTH-INDIAN DISHES</a></font></b></p><br>
+             <hr class="perpendicular-line">
+             <img src="south.jpg" height="400" width="800" align ="right">
+            <br><br><br>
+            <text align="center"><ul><p><b><u><font face="Copperplate Gothic Light" size="6">DOSA</font></u></b></p></ul></text><br><br>
+            <section id="menu">
+                <ul>
+            <font face="Californian FB" size="4.9">
+                <li><b>MYSORE MASALA DOSA- Rs.120/- <button onclick="addToOrder(16)">Add to Order</button></b></li>
+                <br>
+                <li><b>MASALA DOSA- Rs.80/- <button onclick="addToOrder(17)">Add to Order</button></b></li>
+                <br>
+                <li><b>ONION DOSA- Rs.80/- <button onclick="addToOrder(18)">Add to Order</button></b></li>
+                <br>
+                <li><b>PLAIN DOSA- Rs.70/- <button onclick="addToOrder(19)">Add to Order</button></b></li>
+                <br><br><br><br><br><br><br></font></ul>
+            <text align="center"><ul><p><b><u><font face="Copperplate Gothic Light" size="6">SPECIAL DISHES</font></u></b></p></ul></text>
+            <br><br><text align="center"><font face="Californian FB" size="5">
+                <p><b>IDLI- Rs.40/- <button onclick="addToOrder(20)">Add to Order</button></b></p>
+                <br>
+                <p><b>SAMBHAR- Rs.40/-<button onclick="addToOrder(21)">Add to Order</button></b></p>
+                <br>
+                <p><b>UTTAPAM- Rs.40/- <button onclick="addToOrder(22)">Add to Order</button></b></p>
+                <br>
+                <p><b>VADA (MEDU VADA)- Rs.60/- <button onclick="addToOrder(23)">Add to Order</button></b></p>
+                <br>
+                <p><b>RASAM- Rs.80/- <button onclick="addToOrder(24)">Add to Order</button></b></p>
+                <br>
+                <p><b>PONGAL- Rs.45/- <button onclick="addToOrder(25)">Add to Order</button></b></p>
+                <br>
+                <p><b>CURRY LEAF RICE- Rs.60/- <button onclick="addToOrder(26)">Add to Order</button></b></p>
+                <br>
+                <p><b>COCONUT CHUTNEY- Rs.45/- <button onclick="addToOrder(27)">Add to Order</button></b></p>
+                <br>
+                <p><b>PAYASAM- Rs.70/- <button onclick="addToOrder(28)">Add to Order</button></b></p>
+            </font></text></section>
+            <hr class="perpendicular-line"><br>
+        <text align="right"><p><u><b><font color="black" face="Engravers MT" size="6" >WEST-INDIAN DISHES</a></font></b></u></p></text>
+        <hr class="perpendicular-line">
+        <img src="west.jpg" height="500" width="750" align ="left"><br><br>
+        <section id="menu">
+            <ul>
+                <text align="center"><font face="Californian FB" size="5">
+                    <li><b>DHOKLA- Rs.60/- <button onclick="addToOrder(29)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>THEPLA- Rs.70/- <button onclick="addToOrder(30)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>FAFDA- Rs.60/- <button onclick="addToOrder(31)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>PAV BHAJI- Rs.140/- <button onclick="addToOrder(32)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>SHRIKHAND- Rs.85/- <button onclick="addToOrder(33)">Add to Order</button></b></li>
+                    <br></font></ul></section><br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr class="perpendicular-line">
+            <text align="center"><p><u><b><font color="black" face="Engravers MT" size="6" >SPECIAL-INDIAN DISHES AND SNACKS</a></font></b></u></p></text><br>
+            <hr class="perpendicular-line">
+            <img src="up.jpeg" height="500" width="700" align ="left">
+            <text align="center"><font face="Californian FB" size="5">
+                    <li><b>TUNDAY KEBAB- Rs.60/-<button onclick="addToOrder(34)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>LUCKNAWI BIRYANI- Rs.200/- <button onclick="addToOrder(35)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>DAL PURI- Rs.70/- <button onclick="addToOrder(36)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>KACHORI- Rs.70/- <button onclick="addToOrder(37)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>DAHI BHALLE- Rs.60/- <button onclick="addToOrder(38)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>TEHRI- Rs.60/- <button onclick="addToOrder(39)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>ALOO TIKKI- Rs.40/-<button onclick="addToOrder(40)">Add to Order</button></b></li>
+                    <br>
+                    <li><b>SAMOSA-Rs.20/- <button onclick="addToOrder(41)">Add to Order</button></b></li>
+                    <br></font></text>
+                        <hr class="perpendicular-line">
+                        <img src="LKK.jpg" height="400" width="650" align ="right"> <img src="dp.webp" height ="400" width="610" align="left"> 
+                      <text align="center"><p><u><b><font color="black" face="Engravers MT" size="7" >BEVERAGES</a></font></b></u></p></text><br><br><br> 
+                      <hr class="perpendicular-line">
+                      <hr class="perpendicular-line">
+                      <img src="beverages.jpg" height="400" width="650" align ="right"> <img src="tea.jpg" height ="400" width="610" align="left">
+                      <br><text align="center"><p><u><font color="black" face="ALGERIAN" size="7" >TEA</a></font></u></p></text><br><br>
+                      <hr class="perpendicular-line"><BR>
+                      <img src="WhatsApp Image 2023-11-04 at 8.24.55 PM.jpeg" height="600" width="650" align ="left">
+                      <br><br>
+                      <section id="menu">
+                        <ul>
+                        <text align="center"><font face="Californian FB" size="5">
+                            <li><b>KULHAD CHAI- Rs.20/- <button onclick="addToOrder(42)">Add to Order</button></b></li>
+                            <br>
+                            <li><b>GINGER TEA- Rs.20/- <button onclick="addToOrder(43)">Add to Order</button></b></li>
+                            <br>
+                            <li><b>MASALA TEA- Rs.25/- <button onclick="addToOrder(44)">Add to Order</button></b></li>
+                            <br>
+                            <li><b>LEMON TEA- Rs.30/- <button onclick="addToOrder(45)">Add to Order</button></b></li>
+                            <br>
+                            <li><b>BLACK TEA- Rs.50/-<button onclick="addToOrder(46)">Add to Order</button></b></li>
+                            <br>
+                            <li><b>ELAICHI TEA- Rs.25/- <button onclick="addToOrder(47)">Add to Order</button></b></li>
+                            <br>
+                            </font></text></ul><br><br>
+                        <hr class="perpendicular-line">
+                        <text align="center"><p><u><font color="black" face="ALGERIAN" size="7" >COFFEE</a></font></u></p></text><br><br>
+                      <hr class="perpendicular-line">
+                        <text align="LEFT"><font face="Bookman Old Style" size="5">
+                        <P><b>COLD COFFEE- Rs.90/- <button onclick="addToOrder(48)">Add to Order</button></b></P>
+                        </font></text>
+                        <text align="right"><font face="Bookman Old Style" size="5">
+                            <P><b>HOT COFFEE- Rs.60/- <button onclick="addToOrder(49)">Add to Order</button></b></P>
+                            </font></text></section>
+                        <img src="COLDCOFEE.jpg" height="500" width="500" ALIGN="LEFT"><img src="cf.jpg" height="450" width="750" align ="right">
+                        <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+                        <hr class="perpendicular-line">
+                        <text align="center"><p><u><b><font color="black" face="Engravers MT" size="7" >INDIAN-DESSERTS</a></font></b></u></p></text><br>
+                        <hr class="perpendicular-line"><BR><BR>
+                            <img src="ladoo.jpg" height="500" width="600" align ="right">
+                            <section id="menu">
+                                <ul>
+                            <text align="center"><font face="Californian FB" size="5">
+                                <li><b>GULAB JAMUN- Rs.270/- <button onclick="addToOrder(50)">Add to Order</button></b></li><br>
+                                <li><b>RASGULLA- Rs.220/- <button onclick="addToOrder(51)">Add to Order</button></b></li><br>
+                                <li><b>JALEBI- Rs.40/- <button onclick="addToOrder(52)">Add to Order</button></b></li><br>
+                                <li><b>KHEER- Rs.60/- <button onclick="addToOrder(53)">Add to Order</button></b></li><br>
+                                <li><b>BARFI- Rs.400/- <button onclick="addToOrder(54)">Add to Order</button></b></li><br>
+                                <li><b>HALWA- Rs.50/- <button onclick="addToOrder(55)">Add to Order</button></b></li><br>
+                                <li><b>PEDA- Rs.200/- <button onclick="addToOrder(56)">Add to Order</button></b></li><br>
+                                <li><b>MYSORE PAK- Rs.80/- <button onclick="addToOrder(57)">Add to Order</button></b></li><br>
+                                <li><b>MODAK- Rs.150/- <button onclick="addToOrder(58)">Add to Order</button></b></li><br>
+                                <li><b>LADOO- Rs.270/- <button onclick="addToOrder(59)">Add to Order</button></b></li><BR></font></text></ul></section>
+                            <img src="RG.jpg" height="500" width="500" ALIGN="LEFT"><img src="GJ.webp" height="500" width="750" align ="right"><br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br><section id="order">
+                                <h2>Your Order</h2>
+                                <ul id="order-list"></ul>
+                                <p>Total Amount: <span id="total-amount">0.00</span></p>
+                            </section>
+                            <br><br><br><br><br><br><br><br><br><br>
+                            <hr class="perpendicular-line">
+                            <footer>
+                                <p>"Join us in creating unforgettable experiences through the language of taste,<br> where every meal is a celebration of flavors and togetherness."</p>
+                                <TH>CUSTOMER REVIEWS</TH><br><br><TH>CONTACT US<br>Email- theindiantastehub@gmail.com</TH>
+                                    <br>
+                                    <br>
+                                    <br>
+                                &copy; 2023- THE INDIAN TASTE HUB
+                        </footer>          
+</BODY>
+</html>                         
